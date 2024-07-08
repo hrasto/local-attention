@@ -240,4 +240,4 @@ class LocalAttention(Module):
             out = out[:, :orig_seq_len, :]
 
         out, *_ = unpack(out, packed_shape, '* n d')
-        return out
+        return out, attn
